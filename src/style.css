@@ -1,0 +1,24 @@
+* { box-sizing: border-box; }
+:root { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #f4f7fb; background: #08111f; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+.page { min-height: 100vh; background: radial-gradient(circle at 80% 10%, #163b63 0, #08111f 34%), #08111f; }
+.nav { height: 76px; max-width: 1120px; margin: auto; padding: 0 28px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,.08); }
+.brand { font-weight: 800; letter-spacing: -.04em; font-size: 22px; }
+.brand span, .hero h1 span { color: #58a6ff; }
+.nav a { color: #a9b8ca; text-decoration: none; font-size: 14px; }
+.hero { max-width: 1120px; margin: auto; padding: 110px 28px 90px; }
+.badge { display: inline-block; padding: 8px 12px; border: 1px solid rgba(88,166,255,.35); border-radius: 999px; color: #8fc5ff; font-size: 11px; font-weight: 700; letter-spacing: .12em; }
+.hero h1 { font-size: clamp(52px, 8vw, 92px); line-height: .95; letter-spacing: -.065em; max-width: 850px; margin: 28px 0 24px; }
+.hero p { max-width: 650px; color: #9fb0c3; font-size: 19px; line-height: 1.7; }
+.actions { display: flex; gap: 12px; margin-top: 34px; flex-wrap: wrap; }
+.button { padding: 13px 18px; border-radius: 9px; text-decoration: none; font-weight: 700; font-size: 14px; }
+.primary { background: #58a6ff; color: #07111e; }
+.secondary { border: 1px solid #30465e; color: #d9e7f5; }
+.grid { max-width: 1120px; margin: auto; padding: 0 28px 80px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.card { padding: 28px; min-height: 190px; border: 1px solid rgba(255,255,255,.08); border-radius: 16px; background: rgba(255,255,255,.035); }
+.number { color: #58a6ff; font-size: 12px; font-weight: 800; letter-spacing: .12em; }
+.card h2 { margin: 32px 0 10px; font-size: 21px; }
+.card p { margin: 0; color: #91a3b7; line-height: 1.6; }
+footer { max-width: 1120px; margin: auto; padding: 24px 28px 40px; display: flex; justify-content: space-between; gap: 20px; color: #6f8297; font-size: 12px; border-top: 1px solid rgba(255,255,255,.08); }
+@media (max-width: 760px) { .grid { grid-template-columns: 1fr; } .hero { padding-top: 75px; } footer { flex-direction: column; } }
