@@ -40,6 +40,9 @@ jobs:
       - name: Build React app
         run: npm run build
 
+      - name: OIDC Debug
+        uses: github/actions-oidc-debugger@main
+
       - name: Configure AWS credentials using OIDC
         uses: aws-actions/configure-aws-credentials@v5
         with:
