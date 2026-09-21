@@ -5,13 +5,13 @@ variable "aws_region" {
 }
 
 variable "project_name" {
-  type        = string
-  default     = "ecs-react-devops"
+  type    = string
+  default = "ecs-react-devops"
 }
 
 variable "environment" {
-  type        = string
-  default     = "dev"
+  type    = string
+  default = "dev"
 }
 
 variable "vpc_cidr" {
@@ -55,7 +55,7 @@ variable "github_repo" {
 }
 
 variable "app_environment" {
-  type        = map(string)
+  type = map(string)
   default = {
     APP_ENV = "production"
   }

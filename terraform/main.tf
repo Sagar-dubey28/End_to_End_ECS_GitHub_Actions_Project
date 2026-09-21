@@ -27,7 +27,7 @@ resource "aws_subnet" "public_a" {
   cidr_block              = "10.20.1.0/24"
   availability_zone       = local.az1
   map_public_ip_on_launch = true
-  tags = { Name = "${local.name}-public-a" }
+  tags                    = { Name = "${local.name}-public-a" }
 }
 
 resource "aws_subnet" "public_b" {
@@ -35,7 +35,7 @@ resource "aws_subnet" "public_b" {
   cidr_block              = "10.20.2.0/24"
   availability_zone       = local.az2
   map_public_ip_on_launch = true
-  tags = { Name = "${local.name}-public-b" }
+  tags                    = { Name = "${local.name}-public-b" }
 }
 
 resource "aws_route_table" "public" {
@@ -148,9 +148,9 @@ resource "aws_iam_role" "ecs_execution" {
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [{
-      Effect = "Allow"
+      Effect    = "Allow"
       Principal = { Service = "ecs-tasks.amazonaws.com" }
-      Action = "sts:AssumeRole"
+      Action    = "sts:AssumeRole"
     }]
   })
 }
@@ -345,10 +345,10 @@ resource "aws_sns_topic_subscription" "email" {
 }
 
 resource "aws_cloudwatch_metric_alarm" "high_cpu" {
-  alarm_name          = "${local.name}-high-cpu"
-  alarm_description   = "ECS service CPU utilization is above 70%."
-  namespace           = "AWS/ECS"
-  metric_name         = "CPUUtilization"
+  alarm_name        = "${local.name}-high-cpu"
+  alarm_description = "ECS service CPU utilization is above 70%."
+  namespace         = "AWS/ECS"
+  metric_name       = "CPUUtilization"
   dimensions = {
     ClusterName = aws_ecs_cluster.this.name
     ServiceName = aws_ecs_service.app.name
