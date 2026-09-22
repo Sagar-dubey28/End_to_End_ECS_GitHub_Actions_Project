@@ -16,6 +16,7 @@ function App() {
         <p>
           A simple React application containerized with Docker and served by
           Nginx on Amazon ECS Fargate.
+           Checking CI/CD pipeline .
         </p>
         <div className="actions">
           <a className="button primary" href="#architecture">View Stack</a>
