@@ -44,16 +44,6 @@ variable "alert_email" {
   description = "Email address for SNS CPU alarm confirmation"
 }
 
-variable "github_org" {
-  type        = string
-  description = "GitHub organization or username"
-}
-
-variable "github_repo" {
-  type        = string
-  description = "GitHub repository name"
-}
-
 variable "app_environment" {
   type = map(string)
   default = {

@@ -44,8 +44,10 @@ After apply, Terraform prints the ECS service name, cluster name, ECR URL and lo
 
 ## Important
 
-Before applying, update `terraform/terraform.tfvars` and the GitHub repository values in the OIDC configuration.
+Before applying, update `terraform/terraform.tfvars` with your environment values.
 
 The first SNS notification requires an email subscription confirmation.
 
-GitHub Actions uses AWS OIDC, so long-lived AWS access keys are not required.
+GitHub Actions authenticates to AWS with the repository secrets `AWS_ACCESS_KEY_ID` and
+`AWS_SECRET_ACCESS_KEY`. These credentials must have the permissions required to push
+images to ECR and update the ECS service.
