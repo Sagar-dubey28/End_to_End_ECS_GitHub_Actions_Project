@@ -51,3 +51,28 @@ The first SNS notification requires an email subscription confirmation.
 GitHub Actions authenticates to AWS with the repository secrets `AWS_ACCESS_KEY_ID` and
 `AWS_SECRET_ACCESS_KEY`. These credentials must have the permissions required to push
 images to ECR and update the ECS service.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+""just checking dev"
